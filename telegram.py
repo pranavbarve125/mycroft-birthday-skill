@@ -8,8 +8,8 @@
 #     bot.send_message(chat_id, text)
 
 # if __name__ == "__main__":
-#     bot = telebot.TeleBot("6108828628:AAHEHlLF08_jE0KSTdg94oEWuKfhYS3bzEQ")
-#     chat_id = '5319430491'
+#     bot = telebot.TeleBot("")
+#     chat_id = ''
 #     text = "This is a test message."
 #     send_message(bot, chat_id, text)
 
