@@ -1,20 +1,22 @@
 from mycroft import MycroftSkill, intent_file_handler
-from mycroft.skills.api import SkillApi
-import time
+import re
+
+from .google_calendar_api import get_calendar_events
 
 class Birthday(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
         self.txt = ""
         
-    @intent_file_handler('birthday.intent')
+    @intent_file_handler('duration.intent')
     def handle_birthday(self, message):
-        duration = message.data.get('duration')
+        duration_entity = message.data.get('duration')
+        date_entity = date_entity = message.data.get('date')
         
-        with open('/home/pranav125/Desktop/mycroft-core/skills/birthday-skill/morning.txt', 'r') as f:
-            self.txt = str(f.read())
+        self.txt = get_calendar_events()
         
         self.speak(self.txt)
+
 
 def create_skill():
     return Birthday()

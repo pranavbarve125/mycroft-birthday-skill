@@ -1,1 +1,0 @@
-The data from the CSV file is:  Atharva Sudame was born on 10/01/1998 in  Pune.  Omkar Amle was born on 10/01/1996 in  Pune.  Rohit Awate was born on 12/01/1998 in  California.  Pranav Barve was born on 12/05/1998 in Melbourne.  Sasha Nazreth was born on 17/12/2000 in Melbourne. 
