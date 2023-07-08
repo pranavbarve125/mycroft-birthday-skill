@@ -18,38 +18,38 @@
 # using the official telegram api
 # ---------------------------------------------------------------------
 
-import requests
-import json
+# import requests
+# import json
 
-class TelegramAPI:
-    def __init__(self, token):
-        self.token = token
-        self.base_url = f"https://api.telegram.org/bot{token}/"
+# class TelegramAPI:
+#     def __init__(self, token):
+#         self.token = token
+#         self.base_url = f"https://api.telegram.org/bot{token}/"
 
-    def send_message(self, chat_id, text):
-        url = self.base_url + "sendMessage"
-        params = {
-            "chat_id": chat_id,
-            "text": text
-        }
-        response = requests.get(url, params=params)
-        # Handle the response and any errors here
+#     def send_message(self, chat_id, text):
+#         url = self.base_url + "sendMessage"
+#         params = {
+#             "chat_id": chat_id,
+#             "text": text
+#         }
+#         response = requests.get(url, params=params)
+#         # Handle the response and any errors here
 
-    # Add other methods for interacting with the Telegram API
+#     # Add other methods for interacting with the Telegram API
 
-def read_credentials(filename):
-    with open(filename, 'r') as file:
-        data = json.load(file)
-        token = data['token']
-        chat_id = data['chat_id']
-    return token, chat_id
+# def read_credentials(filename):
+#     with open(filename, 'r') as file:
+#         data = json.load(file)
+#         token = data['token']
+#         chat_id = data['chat_id']
+#     return token, chat_id
 
 
-def main():
-    token, chat_id = read_credentials('/home/pranav125/Desktop/mycroft-core/skills/birthday-skill/credentials/telegramcreds.json')
-    api = TelegramAPI(token)
-    text = "Message"
-    api.send_message(chat_id, text)
+# def main():
+#     token, chat_id = read_credentials('/home/pranav125/Desktop/mycroft-core/skills/birthday-skill/credentials/telegramcreds.json')
+#     api = TelegramAPI(token)
+#     text = "Message"
+#     api.send_message(chat_id, text)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

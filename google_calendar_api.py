@@ -48,6 +48,9 @@ class GoogleCalendar:
             end_date = current_date
         elif duration_entity == "tomorrow":
             end_date = current_date + datetime.timedelta(days=1)
+        else: #if wrong argument is passed
+            return "Please specify correct duration."
+
 
         formatted_current_date = current_date.isoformat() + 'Z'
         formatted_end_date = end_date.isoformat() + 'Z'
