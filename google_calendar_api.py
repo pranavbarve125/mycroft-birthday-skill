@@ -73,9 +73,4 @@ class GoogleCalendar:
                 name = re.sub(r'^Birthday - ', '', event_summary)
                 events_list.append((formatted_date, name))
         
-        # prepare a string
-        return_string = "There are {} birthday(s) for the specified duration.\n".format(len(events_list))
-        for date, name in events_list:
-            return_string += f'{name} {date}.\n'
-
-        return return_string
+        return events_list
