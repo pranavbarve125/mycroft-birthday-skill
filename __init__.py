@@ -1,8 +1,5 @@
-from apscheduler.schedulers.background import BackgroundScheduler
 from mycroft import MycroftSkill, intent_file_handler
 from mycroft.skills.api import SkillApi
-import time
-
 import re
 
 from .google_calendar_api import GoogleCalendar
@@ -50,9 +47,11 @@ class Birthday(MycroftSkill):
             self.txt += f'{name} {date}.\n'
 
         self.speak(self.txt)
-        self.tele.sendTelegramMessage(self.txt)
-        # self.speak(self.tele.sendTelegramMessage(msg))
+        msg = 'works'
+        self.speak(self.tele.sendTelegramMessage(msg))
+
+    def handle_birthdays_date(self, message):
+        date_entity = date_entity = message.data.get('date')
 
 def create_skill():
     return Birthday()
-    
